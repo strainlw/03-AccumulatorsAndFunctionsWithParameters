@@ -32,7 +32,7 @@ def main():
     #       ** Ask a TA or your professor for help in that case. **
     # -------------------------------------------------------------------------
 
-    # m4t_tester.main()
+    m4t_tester.main()
 
 
 def run_test_sum_of_digits():
@@ -248,7 +248,7 @@ def digits_in_power(n, k):
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -259,6 +259,24 @@ def run_test_fancy_sums_of_digits():
     print('--------------------------------------------------')
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
+
+    # Test 1
+    expected =1
+    actual = fancy_sums_of_digits(10)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 2
+    expected =19084
+    actual = fancy_sums_of_digits(2)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 3
+    expected =124309
+    actual = fancy_sums_of_digits(35)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', actual)
 
     # -------------------------------------------------------------------------
     # HINT:  For your 1st test, consider  n=10.  Figure out BY HAND
@@ -298,7 +316,7 @@ def fancy_sums_of_digits(n):
     return sum_of_digits(x**y)
 
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
