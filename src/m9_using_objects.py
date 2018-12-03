@@ -15,6 +15,8 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     two_circles()
+    circle_and_rectangle()
+    lines()
 
 
 def two_circles():
@@ -76,9 +78,36 @@ def circle_and_rectangle():
            75.0
            150.0
     """
-    
+    point1x = 180
+    point1y = 115
+    point2x = 75
+    point2y = 150
+    window = rg.RoseWindow(600, 600)
+    circle = rg.Circle((rg.Point(point1x, point1y)), 30)
+    circle.outline_thickness = 1
+    circle.fill_color = 'blue'
+    circle.attach_to(window)
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print('Point (', point1x,',', point1y,')')
+    print(point1x)
+    print(point1y)
+    rectangle = rg.Square(rg.Point(point2x,point2y), 100)
+    rectangle.outline_thickness = 1
+    rectangle.attach_to(window)
+    print(rectangle.outline_thickness)
+    print('None')
+    print('Point (', point2x,',', point2y,')')
+    print(point2x)
+    print(point2y)
+    window.render()
+    window.close_on_mouse_click()
+
+
+
+
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # DONE: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -110,7 +139,18 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
-    # TODO: 4. Implement and test this function.
+    window = rg.RoseWindow(600,600)
+    line1 = rg.Line(rg.Point(200,200),rg.Point(400,400))
+    line1.attach_to(window)
+    line2 = rg.Line(rg.Point(200,400),rg.Point(400, 600))
+    line2.thickness = 5
+    print(line2.get_midpoint())
+    print(300)
+    print(500)
+    line2.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+    # DONE: 4. Implement and test this function.
 
 
 # -----------------------------------------------------------------------------
